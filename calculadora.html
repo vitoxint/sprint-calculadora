@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculadora</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-10 col-md-4 bg-dark text-light rounded p-4">
+                <h1 class="text-center">Calculadora</h1>
+                <div class="bg-secondary text-light p-3 rounded mb-3 text-right" id="result"></div>
+                <div class="row">
+                    <div class="col-3"><button class="btn btn-secondary btn-block"
+                            onclick="addCharacter('/')">÷</button></div>
+                    <div class="col-3"><button class="btn btn-secondary btn-block"
+                            onclick="addCharacter('*')">x</button></div>
+                    <div class="col-3"><button class="btn btn-secondary btn-block"
+                            onclick="addCharacter('-')">-</button></div>
+                    <div class="col-3"><button class="btn btn-danger btn-block" onclick="clearResult()">C</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-3"><button class="btn btn-light btn-block" onclick="addCharacter('7')">7</button>
+                    </div>
+                    <div class="col-3"><button class="btn btn-light btn-block" onclick="addCharacter('8')">8</button>
+                    </div>
+                    <div class="col-3"><button class="btn btn-light btn-block" onclick="addCharacter('9')">9</button>
+                    </div>
+                    <div class="col-3"><button class="btn btn-secondary btn-block"
+                            onclick="addCharacter('+')">+</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-3"><button class="btn btn-light btn-block" onclick="addCharacter('4')">4</button>
+                    </div>
+                    <div class="col-3"><button class="btn btn-light btn-block" onclick="addCharacter('5')">5</button>
+                    </div>
+                    <div class="col-3"><button class="btn btn-light btn-block" onclick="addCharacter('6')">6</button>
+                    </div>
+                    <div class="col-3"><button class="btn btn-secondary btn-block" onclick="calculate()">=</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3"><button class="btn btn-light btn-block" onclick="addCharacter('1')">1</button>
+                    </div>
+                    <div class="col-3"><button class="btn btn-light btn-block" onclick="addCharacter('2')">2</button>
+                    </div>
+                    <div class="col-3"><button class="btn btn-light btn-block" onclick="addCharacter('3')">3</button>
+                    </div>
+                    <div class="col-3"><button class="btn btn-light btn-block" onclick="addCharacter('0')">0</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
