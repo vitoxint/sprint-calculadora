@@ -5,16 +5,7 @@ $( document ).ready(function() {
     document.getElementById('result').innerHTML = result;
 });
 
-function addCharacter(character) {
 
-    if( !!!result ){
-        result = '0';
-        console.log(result);
-    }
-    console.log(result);
-    result += character;
-    document.getElementById('result').innerHTML = result;
-}
 
 
 $("#calculate").click(function(){
@@ -33,23 +24,16 @@ $("#calculate").click(function(){
 
 $(".coma").click(function(){
     
-/*     var final = result.substring(result.length -1 );
+    let myArray = result.split(/[-+*/]/);
+    var ultimo = myArray[myArray.length -1 ];
 
-    if( isNaN( parseFloat(final))){
-        alert('No deben haber dos operadores contíguos');
+    if( ultimo.includes('.') ){
+        alert("No puede haber dos operadores decimales en el mismo número");
         return 0;
-    } */
-
-    let text = "How are you doing today?";
-    const myArray = result.split(['+' , '-' , '*' , '/']);
-    let word = myArray[1];
-
-    console.log(word);
+    }
 
     result += this.value;
     document.getElementById('result').innerHTML = result;
-
-
     
 });
 
@@ -103,7 +87,7 @@ $("#back").click(function(){
         result = result.substring(0, result.length - 1);
     }
 
-    //result = result.substring(0, result.length - 1);
+    
     document.getElementById('result').innerHTML = result;
 
 });
