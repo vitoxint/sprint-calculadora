@@ -1,7 +1,14 @@
-let result = '';
+let result = '0';
+document.ready(function(){
+    $('#result').innerHTML = '0';
+})
 
 function addCharacter(character) {
-    result += character;
+    if (result=='0') {
+        result = character;
+    } else {
+        result += character;
+    }
     document.getElementById('result').innerHTML = result;
 }
 
@@ -15,7 +22,7 @@ $("#calculate").click(function(){
     }
 
 
-    result = eval(result);
+    result = parseFloat(eval(result).toFixed(6));
     document.getElementById('result').innerHTML = result;
 
 });
@@ -30,8 +37,8 @@ $(".actual").click(function(){
 
 
 $("#clear").click( function() {
-    result = '';
-    document.getElementById('result').innerHTML = '';
+    result = '0';
+    document.getElementById('result').innerHTML = '0';
 });
 
 $("#back").click(function(){
