@@ -57,7 +57,7 @@ $("#back").click(function(){
 
     if( result.length == 1 ){
 
-        result = 0;
+        result = '0';
 
     }else{
         result = result.substring(0, result.length - 1);
