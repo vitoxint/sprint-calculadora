@@ -31,6 +31,28 @@ $("#calculate").click(function(){
 
 });
 
+$(".coma").click(function(){
+    
+/*     var final = result.substring(result.length -1 );
+
+    if( isNaN( parseFloat(final))){
+        alert('No deben haber dos operadores contíguos');
+        return 0;
+    } */
+
+    let text = "How are you doing today?";
+    const myArray = result.split(['+' , '-' , '*' , '/']);
+    let word = myArray[1];
+
+    console.log(word);
+
+    result += this.value;
+    document.getElementById('result').innerHTML = result;
+
+
+    
+});
+
 
 
 $(".operador").click(function(){
