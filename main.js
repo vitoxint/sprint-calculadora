@@ -25,11 +25,29 @@ $("#calculate").click(function(){
         return 0;
     }
 
+    result = parseFloat(eval(result).toFixed(6));
+    result = result.toString() ;
+    document.getElementById('result').innerHTML = result ;
 
-    result = parseFloat(eval(result).toFixed(6));
-    result = parseFloat(eval(result).toFixed(6));
+});
+
+
+
+$(".operador").click(function(){
+    
+
+    var final = result.substring(result.length -1 );
+
+    if( isNaN( parseFloat(final))){
+        alert('No deben haber dos operadores contíguos');
+        return 0;
+    }
+
+    result += this.value;
     document.getElementById('result').innerHTML = result;
 
+
+    
 });
 
 $(".actual").click(function(){
