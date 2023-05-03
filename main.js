@@ -27,6 +27,7 @@ $("#calculate").click(function(){
 
 
     result = parseFloat(eval(result).toFixed(6));
+    result = parseFloat(eval(result).toFixed(6));
     document.getElementById('result').innerHTML = result;
 
 });
